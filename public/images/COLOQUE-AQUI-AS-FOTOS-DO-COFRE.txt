@@ -1,0 +1,2 @@
+Coloque nesta pasta as fotos do cofre. Exemplo: cofre-frente.jpg e cofre-detalhe.jpg.
+Depois, edite os caminhos das imagens em public/sobre.html.

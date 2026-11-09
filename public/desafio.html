@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio | FoxSecure</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><script src="js/desafio.js" defer></script>
+</head>
+<body><div class="grid-glow"></div>
+<header class="topbar"><a class="brand" href="index.html"><img src="images/foxsecure-logo.png" alt="Logo FoxSecure"><span>FOX<span class="accent">SECURE</span></span></a><nav><a href="sobre.html">Sobre</a><a href="#" id="logout">Sair</a></nav></header>
+<main class="page-wrap">
+  <div class="section-heading left"><p class="eyebrow">02 / ACESSO AO COFRE</p><h1 class="page-title">Desvende o <span class="neon">código.</span></h1><p>Resolva cada charada. Cada resposta representa um dígito do código de quatro números.</p></div>
+  <div class="challenge-top"><div><span class="tiny-label">USUÁRIO CONECTADO</span><strong id="userName">Carregando...</strong></div><div class="attempt-box"><span class="tiny-label">TENTATIVAS RESTANTES</span><strong id="attempts">03</strong></div></div>
+  <section id="riddles" class="riddle-grid"><p>Carregando charadas...</p></section>
+  <section class="code-panel"><div><p class="eyebrow">CÓDIGO DE ACESSO</p><h2>Digite os quatro dígitos</h2><p>Insira as respostas na mesma ordem das charadas.</p></div>
+    <form id="codeForm"><div class="digit-inputs"><input inputmode="numeric" maxlength="1" aria-label="Primeiro dígito" required><input inputmode="numeric" maxlength="1" aria-label="Segundo dígito" required><input inputmode="numeric" maxlength="1" aria-label="Terceiro dígito" required><input inputmode="numeric" maxlength="1" aria-label="Quarto dígito" required></div><button class="button button-primary full" type="submit">Verificar código <span>→</span></button></form>
+    <p id="challengeMessage" class="message" aria-live="polite"></p>
+  </section>
+</main><footer><span>FOXSECURE</span><span>Quatro charadas. Um acesso.</span></footer></body></html>
