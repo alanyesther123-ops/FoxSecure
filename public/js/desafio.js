@@ -78,7 +78,7 @@ codeForm.addEventListener("submit", async (event) => {
 });
 document.querySelector("#logout").addEventListener("click", async (event) => {
   event.preventDefault();
-  await api("/api/logout", { method: "POST" }).catch(() => {});
+  await api("/api/logout", { method: "POST" }).catch(() => { });
   window.location.href = "index.html";
 });
 loadChallenge();

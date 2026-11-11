@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,18 @@
   <title>FoxSecure | Acesso inteligente</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/app.js" defer></script>
 </head>
+
 <body>
   <div class="grid-glow"></div>
   <header class="topbar">
-    <a class="brand" href="index.html"><img src="images/foxsecure-logo.png" alt="Logo FoxSecure"><span>FOX<span class="accent">SECURE</span></span></a>
+    <a class="brand" href="index.html"><img src="images/foxsecure-logo.png" alt="Logo FoxSecure"><span>FOX<span
+          class="accent">SECURE</span></span></a>
     <nav><a href="#cadastro">Criar conta</a><a href="sobre.html">Sobre o projeto</a></nav>
   </header>
 
@@ -23,31 +28,45 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> SISTEMA DE ACESSO INTELIGENTE</p>
         <h1>SEGURANÇA<br>EM CADA <span class="neon">DÍGITO.</span></h1>
-        <p class="hero-text">Descubra as quatro charadas, encontre o código e conheça uma nova forma de proteger seus objetos.</p>
+        <p class="hero-text">Descubra as quatro charadas, encontre o código e conheça uma nova forma de proteger seus
+          objetos.</p>
         <a class="button button-outline" href="#cadastro">Começar experiência <span>↘</span></a>
       </div>
       <div class="hero-mark">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
         <div class="shield"><span>FOX</span><strong>SECURE</strong><small>SMART ACCESS</small></div>
         <span class="orbit-label">ESP32 • IoT • SECURITY</span>
       </div>
     </section>
 
     <section class="auth-section" id="cadastro">
-      <div class="section-heading"><p class="eyebrow">01 / IDENTIFICAÇÃO</p><h2>Entre no sistema</h2><p>Crie sua conta para iniciar o desafio do FoxSecure.</p></div>
+      <div class="section-heading">
+        <p class="eyebrow">01 / IDENTIFICAÇÃO</p>
+        <h2>Entre no sistema</h2>
+        <p>Crie sua conta para iniciar o desafio do FoxSecure.</p>
+      </div>
       <div class="auth-card">
-        <div class="tabs"><button class="tab active" data-tab="register">Criar conta</button><button class="tab" data-tab="login">Já tenho conta</button></div>
+        <div class="tabs"><button class="tab active" data-tab="register">Criar conta</button><button class="tab"
+            data-tab="login">Já tenho conta</button></div>
         <form id="registerForm" class="auth-form">
-          <label>Nome completo<input name="nome" type="text" minlength="3" maxlength="80" autocomplete="name" placeholder="Seu nome" required></label>
-          <label>Nome de usuário<input name="username" type="text" minlength="3" maxlength="20" autocomplete="username" placeholder="Ex.: foxuser01" required></label>
-          <label>E-mail<input name="email" type="email" autocomplete="email" placeholder="voce@email.com" required></label>
-          <label>Senha<input name="password" type="password" minlength="8" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" required></label>
-          <label>Confirmar senha<input name="confirmPassword" type="password" minlength="8" autocomplete="new-password" placeholder="Digite a senha novamente" required></label>
+          <label>Nome completo<input name="nome" type="text" minlength="3" maxlength="80" autocomplete="name"
+              placeholder="Seu nome" required></label>
+          <label>Nome de usuário<input name="username" type="text" minlength="3" maxlength="20" autocomplete="username"
+              placeholder="Ex.: foxuser01" required></label>
+          <label>E-mail<input name="email" type="email" autocomplete="email" placeholder="voce@email.com"
+              required></label>
+          <label>Senha<input name="password" type="password" minlength="8" autocomplete="new-password"
+              placeholder="Mínimo de 8 caracteres" required></label>
+          <label>Confirmar senha<input name="confirmPassword" type="password" minlength="8" autocomplete="new-password"
+              placeholder="Digite a senha novamente" required></label>
           <button class="button button-primary full" type="submit">Criar minha conta <span>→</span></button>
         </form>
         <form id="loginForm" class="auth-form hidden">
-          <label>Usuário ou e-mail<input name="login" type="text" autocomplete="username" placeholder="Seu usuário ou e-mail" required></label>
-          <label>Senha<input name="password" type="password" autocomplete="current-password" placeholder="Sua senha" required></label>
+          <label>Usuário ou e-mail<input name="login" type="text" autocomplete="username"
+              placeholder="Seu usuário ou e-mail" required></label>
+          <label>Senha<input name="password" type="password" autocomplete="current-password" placeholder="Sua senha"
+              required></label>
           <button class="button button-primary full" type="submit">Entrar <span>→</span></button>
         </form>
         <p id="authMessage" class="message" aria-live="polite"></p>
@@ -55,9 +74,12 @@
     </section>
 
     <section class="info-strip">
-      <div><strong>04</strong><span>charadas</span></div><div><strong>03</strong><span>tentativas</span></div><div><strong>01</strong><span>código de acesso</span></div>
+      <div><strong>04</strong><span>charadas</span></div>
+      <div><strong>03</strong><span>tentativas</span></div>
+      <div><strong>01</strong><span>código de acesso</span></div>
     </section>
   </main>
   <footer><span>FOXSECURE</span><span>Projeto acadêmico • Sistemas Embarcados e IoT</span></footer>
 </body>
+
 </html>

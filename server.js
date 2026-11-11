@@ -73,8 +73,9 @@ app.use(session({
   }
 }));
 
-const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 12, standardHeaders: "draft-7", legacyHeaders: false });
-const attemptLimiter = rateLimit({ windowMs: 60 * 1000, limit: 8, standardHeaders: "draft-7", legacyHeaders: false });
+// Modo apresentação: sem limite de requisições
+const authLimiter = (req, res, next) => next();
+const attemptLimiter = (req, res, next) => next();
 
 const riddleBank = [
   { q: "Quantos lados tem um triângulo?", a: "3", level: "Fácil" },
@@ -170,7 +171,7 @@ app.post("/api/register", authLimiter, async (req, res) => {
   if (nome.trim().length < 3 || nome.trim().length > 80) return res.status(400).json({ error: "Informe um nome entre 3 e 80 caracteres." });
   if (!/^[a-zA-Z0-9_.-]{3,20}$/.test(username.trim())) return res.status(400).json({ error: "O usuário deve ter de 3 a 20 caracteres e usar apenas letras, números, ponto, traço ou underline." });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return res.status(400).json({ error: "Informe um e-mail válido." });
-  if (password.length < 8 || !/[A-Za-z]/.test(password) || !/[0-9]/.test(password)) return res.status(400).json({ error: "A senha deve ter pelo menos 8 caracteres, incluindo letras e números." });
+  if (password.length < 4) return res.status(400).json({ error: "A senha deve ter pelo menos 4 caracteres." });
   if (password !== confirmPassword) return res.status(400).json({ error: "As senhas não coincidem." });
   const passwordHash = await bcrypt.hash(password, 12);
   try {
